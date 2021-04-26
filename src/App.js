@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+
+import React, { useEffect, useState } from 'react';
+import Cart from './components/Cart/Cart';
+import Friend from './components/Friend/Friend';
+import data from './data/data.json';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [friends, setFriends] = useState([]);
+  useEffect(() => {
+    setFriends(data);
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="friend">
+        {
+          friends.map((friend) => <Friend friend={friend} key={friend.id}></Friend>)
+        }
+      </div>
+      <div className="cart">
+        <Cart></Cart>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
