@@ -7,6 +7,19 @@
     width:90%;
 }
 .img-container img{
-    width: 200px;
-    height:200px;
+    width: 180px;
+    height:190px;
+    border: 1px solid black;
+    margin-top: 7px;
+    background-color:cyan;
+}
+.main-btn{
+    width: 150px;
+    height:25px;
+    background:cyan;
+    border-radius: 5px;
+}
+
+.description{
+    margin-left: 40px;
 }

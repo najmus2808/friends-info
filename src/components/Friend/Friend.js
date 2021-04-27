@@ -12,7 +12,7 @@ const Friend = (props) => {
                 <h4>Email: {email}</h4>
                 <h4>Phone: {phone}</h4>
                 <h5>Salary: {salary}</h5>
-                <button>Add Friend</button>
+                <button className="main-btn" onClick={() =>props.handleCart(props.friend)}>Add Friend</button>
             </div>
         </div>
     );
